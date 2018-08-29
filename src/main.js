@@ -1,4 +1,6 @@
 
-document.getElementById("Btn").addEventListener("click", function(){
-    alert("You Clicked");
-    });
+document.getElementById("Btn").addEventListener("click",formAlert);
+
+    function formAlert(){
+        alert("Enviando formulario...");
+    }
