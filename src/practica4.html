@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<div class="page-header text-center bg-primary" style="margin-top: 0">
+    <h1 style="margin-top: 0;padding-top: 10px" >Practica 4 Js</h1>
+</div>
+<div class="container">
+    <div class="row">
+<div class="col-sm-6"> 
+        <div>
+        
+                <div style="width:80%;display: block;margin-left: auto;margin-right: auto;">    
+                    <form>
+                        <a data-toggle="collapse" data-target="#form1Div" id="form1" class="btn btn-primary center-block"><span id=box1 class="glyphicon glyphicon-plus" style="float:left"></span>Formulario 1</a>
+                        
+                        <div id="form1Div" class="collapse" style="margin-top: 10px">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>   
+                                <input type="text"class="form-control" placeholder="Nombre..." id="nombre" >
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido">Apellido</label>   
+                                <input type="text"class="form-control" placeholder="Apellido..." id="apellido" >
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Teléfono</label>   
+                                <input type="text"class="form-control" placeholder="01 00 000" id="tel" >
+                            </div>
+                            <div class="form-group"> 
+                            <label for="formInput">Comentarios:</label>  
+                                <textarea name="comentarios"class="form-control" id="formInput" cols="30" rows="5"></textarea>
+                            </div>
+                                
+                            <button id="Btn" type="button" class="btn btn-success">Guardar</button>
+                            <button id="Btn2" type="button" class="btn btn-danger">Clear</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                
+</div>
+   
+        
+        <div class="col-sm-6">
+            <div class="visible-xs-block" style="padding: 10px"></div>
+            <div style="width:80%" class="center-block">
+
+                <label for="Form">Formulario:</label> 
+                <div class="well" style="min-height: 200px; background-color:rgb(238, 238, 238) "><p id="Form">Texto demo</p></div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+    JAVASCRIPT
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="practica4.js"></script>
+    </body>
+    </html>
