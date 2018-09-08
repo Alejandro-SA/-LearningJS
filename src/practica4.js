@@ -15,18 +15,73 @@ box.classList.toggle("glyphicon-minus");
 }
 
 function formAlert(){
-    let nombre = document.getElementById('nombre').value;
+    let nombreStatus , apellidoStatus, telStatus, cmtStatus = false
+    var nombre = document.getElementById('nombre').value;
     let apellido = document.getElementById('apellido').value;
     let tel = document.getElementById('tel').value;
     let cmt = document.getElementById('formInput').value;
-    if (nombre!="" && apellido!="" && tel!="" && cmt!=""){
+    cmt=cmt.trim();
+    let words= cmt.split(/(?:\W+)/);
+    console.log(words);
+    if (nombre.match(/^[^\s][A-Za-z\s]*$/)){
+       console.log ("nombre OK");
+        succes("Nombre");
+        nombreStatus=true;
+    }
+    else {
+    message("Nombre", "Escribe tu nombre (solo letras)"); 
+    }
+    
+       if (apellido.match(/^[^\s][A-Za-z\s]*$/)){
+       console.log ("apellido OK");
+        succes("Apellido");
+        apellidoStatus=true;
+    }
+    else {
+    message("Apellido", "Escribe tu apellido (solo letras)"); 
+    }
+    
+    
+   if ((tel.match(/[0-9]{10}/))&& (!tel.match(/\D/))){
+       console.log ("tel OK");
+        succes("Tel");
+        telStatus=true
+    }
+    else {
+    message("Tel", "Escribe tu teléfono (mayor a 10 digito sin espacio ni guiones)"); 
+    }
+    
+       if (words.length > 20){
+       console.log ("cmt OK");
+        succes("Cmt");
+        cmtStatus=true
+    }
+    else {
+    message("Cmt", "Escribe más de 20 palabras"); 
+    }
+    if (nombreStatus && apellidoStatus && telStatus && cmtStatus){
 
         form.innerHTML="<strong>Nombre:</strong> " + nombre + "<br>" +
         "<strong>Apellido:</strong> " + apellido + "<br>" + 
         "<strong>Teléfono:</strong> "+ tel + "<br> <br>" +
-        "<strong>Comentarios:</strong>"+"<br>" + cmt
+        "<strong>Comentarios:</strong>"+"<br>" + cmt ;
     }
         
     }
+    function message(x , mess){
+    document.getElementById('help'+x).innerHTML=mess;
+    document.getElementById('group'+x).classList.add("has-error");
+        return console.log("help"+x)
+    }
+     function succes(x){
+    document.getElementById('help'+x).innerHTML="<span class='glyphicon glyphicon-ok'></span>";
+    document.getElementById('group'+x).classList.add("has-success");
+    document.getElementById('group'+x).classList.remove("has-error"); 
+    }
     
-    function formClear(){form.innerHTML=""}
+    
+    
+    function formClear(){
+        form.innerHTML="" ;
+        }
+        
