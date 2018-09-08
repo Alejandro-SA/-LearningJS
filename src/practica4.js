@@ -29,7 +29,8 @@ function formAlert(){
         nombreStatus=true;
     }
     else {
-    message("Nombre", "Escribe tu nombre (solo letras)"); 
+    message("Nombre", "Escribe tu nombre (solo letras)");
+    formClear();
     }
     
        if (apellido.match(/^[^\s][A-Za-z\s]*$/)){
@@ -38,31 +39,34 @@ function formAlert(){
         apellidoStatus=true;
     }
     else {
-    message("Apellido", "Escribe tu apellido (solo letras)"); 
+    message("Apellido", "Escribe tu apellido (solo letras)");
+    formClear();
     }
     
     
    if ((tel.match(/[0-9]{10}/))&& (!tel.match(/\D/))){
        console.log ("tel OK");
         succes("Tel");
-        telStatus=true
+        telStatus=true;
     }
     else {
-    message("Tel", "Escribe tu teléfono (mayor a 10 digito sin espacio ni guiones)"); 
+    message("Tel", "Escribe tu teléfono (mayor a 10 digito sin espacio ni guiones)");
+    formClear();
     }
     
-       if (words.length > 20){
+       if (words.length > 5){
        console.log ("cmt OK");
         succes("Cmt");
-        cmtStatus=true
+        cmtStatus=true;
     }
     else {
-    message("Cmt", "Escribe más de 20 palabras"); 
+    message("Cmt", "Escribe más de 5 palabras");
+    formClear();
     }
     if (nombreStatus && apellidoStatus && telStatus && cmtStatus){
 
-        form.innerHTML="<strong>Nombre:</strong> " + nombre + "<br>" +
-        "<strong>Apellido:</strong> " + apellido + "<br>" + 
+        form.innerHTML="<strong>Nombre:</strong> " + '<span style="text-transform: capitalize">'+nombre +"</span>" + "<br>" +
+        "<strong>Apellido:</strong> " +'<span style="text-transform: capitalize">'+apellido+"</span>" + "<br>" + 
         "<strong>Teléfono:</strong> "+ tel + "<br> <br>" +
         "<strong>Comentarios:</strong>"+"<br>" + cmt ;
     }
