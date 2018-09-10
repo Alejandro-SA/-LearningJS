@@ -23,7 +23,7 @@ function formAlert(){
     cmt=cmt.trim();
     let words= cmt.split(/(?:\W+)/);
     console.log(words);
-    if (nombre.match(/^[^\s][A-Za-z\s]*$/)){
+    if (nombre.match(/^[^\s][A-Za-zÁ-Źá-ź\s]*$/)){
        console.log ("nombre OK");
         succes("Nombre");
         nombreStatus=true;
@@ -33,7 +33,7 @@ function formAlert(){
     formClear();
     }
     
-       if (apellido.match(/^[^\s][A-Za-z\s]*$/)){
+       if (apellido.match(/^[^\s][A-Za-zÁ-Źá-ź\s]*$/)){
        console.log ("apellido OK");
         succes("Apellido");
         apellidoStatus=true;
