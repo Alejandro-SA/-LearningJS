@@ -27,19 +27,46 @@
 // document.getElementById("calcHistory").innerHTML ="";
 
 // }
-
+var operation = "";
+var temp = "";
 $(function () {
-
-
-    var operation = "";
-
     $(".caclKey").click(displayKey);
+    $("#calcEq").click(equal);
+    $("#calcClear").click(clear);
+    
 
    function displayKey() {
 
-       operation= operation +" "+ this.innerHTML
-       document.getElementById("calcHistory").innerHTML = operation;
-        
-     }
+    if  (this.innerHTML =="+" ||this.innerHTML =="-" || this.innerHTML =="X" ||this.innerHTML =="/")
+    {
+      operation= temp+ operation +(" &nbsp")+ this.innerHTML+(" &nbsp");
+       $("#calcHistory").html(operation);
+       temp="";
+      }
+else
+operation= temp+ operation +this.innerHTML
+$("#calcHistory").html(operation);
+temp="";
 
-});
+     
+
+}
+function equal() {
+    let fixed = operation.replace(/[X]/g,"*")   
+    fixed = fixed.replace(/&nbsp/g ," ")   
+    
+    $("#calcDisplay").html( eval(fixed));
+    temp=eval(fixed);
+    operation ="";
+   $("#calcHistory").innerHTML ="";}
+
+   function clear() {
+   $("#calcDisplay").html("");
+    operation ="";
+    $("#calcHistory").html("");
+    temp="";    
+    }
+
+}
+
+);
