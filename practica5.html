@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Calculadorae</title>
+    <title>Calculadora</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     
@@ -12,36 +12,44 @@
     <h1>Practica 5</h1>
 
     <div><table  border="1" align="center" cellpadding="10">
-            <tr>
-                    <td colspan="4">Display</td>
+           
+        <div id="calcHistory" align="center"></div>
+        <tr>
+                    <td colspan="4" id="calcDisplay">Display</td>
                    
                 </tr>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
+            <td><button class="caclKey" type="button">1</button></td>
+            <td><button class="caclKey" type="button">2</button></td>
+            <td><button class="caclKey" type="button">3</button></td>
+            <td><button class="caclKey" type="button">+</button></td>
+           
         </tr>
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
+                <td><button class="caclKey" type="button">4</button></td>
+                <td><button class="caclKey" type="button">5</button></td>
+                <td><button class="caclKey" type="button">6</button></td>
+                <td><button class="caclKey" type="button">-</button></td>
+               
+        
         </tr>
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>x</td>
+                <td><button class="caclKey" type="button">7</button></td>
+                <td><button class="caclKey" type="button">8</button></td>
+                <td><button class="caclKey" type="button">9</button></td>
+                <td><button class="caclKey" type="button">X</button></td>
+               
+
         </tr>
         <tr>
-            <td>0</td>
-            <td>.</td>
-            <td>=</td>
-            <td>/<t>
+                <td><button class="caclKey" type="button">0</button></td>
+                <td><button id="calcClear" type="button">C</button></td>
+                <td><button id="calcEq" type="button">=</button></td>
+                <td><button class="caclKey" type="button">/</button></td>
+         
         </tr>
     </table></div>
-
-    <script src="main.js"></script>
+    <p id="demo"></p>
+    <script src="practica5.js"></script>
 </body>
 </html>

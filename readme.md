@@ -33,3 +33,8 @@
     abajo del inpout en caso de no contener informacion aparecera un parrafo que diga el campo no puede ir vacio
 
 
+## Practica 5
+
+	Hacer una calculadora en puro html
+	Aceptar input de los botones y mostrarlo en un div de historial 
+	Boton clear borrar operaciones previas
