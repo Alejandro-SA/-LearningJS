@@ -23,7 +23,7 @@ function formAlert(){
     cmt=cmt.trim();
     let words= cmt.split(/(?:\W+)/);
     console.log(words);
-    if (nombre.match(/^[^\s][A-Za-zÁ-Źá-ź\s]*$/)){
+    if (nombre.match(/^[^\s][A-Za-z\s]*$/)){
        console.log ("nombre OK");
         succes("Nombre");
         nombreStatus=true;
@@ -33,7 +33,7 @@ function formAlert(){
     formClear();
     }
     
-       if (apellido.match(/^[^\s][A-Za-zÁ-Źá-ź\s]*$/)){
+       if (apellido.match(/^[^\s][A-Za-z\s]*$/)){
        console.log ("apellido OK");
         succes("Apellido");
         apellidoStatus=true;
@@ -78,7 +78,8 @@ function formAlert(){
         return console.log("help"+x)
     }
      function succes(x){
-    document.getElementById('help'+x).innerHTML="<span class='glyphicon glyphicon-ok'></span>";
+    document.getElementById('help'+x).innerHTML="";
+    document.getElementById('check'+x).innerHTML="<span class='glyphicon glyphicon-ok'></span>"; 
     document.getElementById('group'+x).classList.add("has-success");
     document.getElementById('group'+x).classList.remove("has-error"); 
     }
@@ -89,3 +90,4 @@ function formAlert(){
         form.innerHTML="" ;
         }
         
+
