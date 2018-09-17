@@ -109,7 +109,7 @@ opacity: 0;
 
 
 
-  .container input:active:hover:checked ~ .expandingCircle {
+   .container input:active:hover:checked ~ .expandingCircle, .container input:focus:checked~ .expandingCircle {
     transform:translate(0, -50%) scale(2);
     
     
@@ -119,12 +119,11 @@ opacity: 0;
   }
 
 
-  .container input:active:hover ~ .expandingCircle {
+  .container input:active:hover ~ .expandingCircle , .container input:focus~ .expandingCircle {
     transform: translate(0, -50%) scale(2);
     background-color:gray;
     opacity:.3;
     
     left: 0px;
   }
-
 
