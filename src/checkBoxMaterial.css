@@ -16,6 +16,7 @@ body{background-color: silver}
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+                                  -webkit-tap-highlight-color: transparent;
   }
   
 
@@ -30,6 +31,7 @@ body{background-color: silver}
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+                                  -webkit-tap-highlight-color: transparent;
   }
   
 
@@ -104,7 +106,7 @@ opacity: 0;
 
 
 
-  .container input:active:checked ~ .expandingCircle {
+  .container input:active:hover:checked ~ .expandingCircle {
     transform:translate(0, -50%) scale(2);
     
     
@@ -114,7 +116,7 @@ opacity: 0;
   }
 
 
-  .container input:active ~ .expandingCircle {
+  .container input:active:hover ~ .expandingCircle {
     transform: translate(0, -50%) scale(2);
     background-color:gray;
     opacity:.3;
